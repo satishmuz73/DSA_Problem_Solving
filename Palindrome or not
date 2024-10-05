@@ -1,0 +1,22 @@
+class Solution
+{
+    public String is_palindrome(int n)
+    {
+        // Store the original number
+        int original = n;  
+        int rev = 0;  // Variable to store the reversed number
+        
+        
+        while(n != 0){
+            rev = (rev * 10) + (n % 10);  
+            n = n / 10;  
+        }
+        
+        
+        if (rev == original) {
+            return "Yes";  
+        } else {
+            return "No"; 
+        }
+    }
+}
